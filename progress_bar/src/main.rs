@@ -1,4 +1,8 @@
-use std::{ io::{ stdout, Write }, thread::sleep, time::Duration };
+use std::{
+    io::{stdout, Write},
+    thread::sleep,
+    time::Duration,
+};
 
 fn main() {
     let mut stdout = stdout();
