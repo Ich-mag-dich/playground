@@ -11,9 +11,9 @@ fn main() {
     for i in (0..=100).into_iter() {
         bar = "█".repeat(i / 2);
         bar2 = " ".repeat(50 - i / 2);
-        print!("\r[{}{}] {i}%...", &bar, &bar2);
+        print!("\r\x1b[93m[{}{}] {i}%... \x1b[0m", &bar, &bar2);
         stdout.flush().unwrap();
         sleep(Duration::from_millis(20));
     }
-    println!("\r[{}{}] 100%", &bar, &bar2);
+    println!("\r\x1b[32m[{}{}] 100%       \x1b[0m", &bar, &bar2);
 }
